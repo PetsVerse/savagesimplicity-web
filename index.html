@@ -221,6 +221,17 @@
 
     .app-url:hover { text-decoration: underline; }
 
+    .app-store-badge {
+      display: inline-block;
+      line-height: 0;
+    }
+
+    .app-store-badge img {
+      display: block;
+      height: 36px;
+      width: auto;
+    }
+
     /* ── ORG DETAILS ── */
     .details-grid {
       display: grid;
@@ -326,15 +337,18 @@
       <p class="section-label">Our products</p>
       <div class="apps-grid">
 
-        <a class="app-card" href="https://petsverseapp.com" target="_blank" rel="noopener">
+        <div class="app-card">
           <div class="app-card-header">
             <div class="app-icon app-icon-paw" aria-hidden="true">🐾</div>
             <span class="app-badge badge-live">Live on iOS</span>
           </div>
           <p class="app-name">PetsVerse</p>
           <p class="app-desc">A social platform for pet owners featuring health tracking, community meetups, and breed discovery. Android release in progress.</p>
-          <span class="app-url">petsverseapp.com ↗</span>
-        </a>
+          <a class="app-url" href="https://petsverseapp.com" target="_blank" rel="noopener">petsverseapp.com ↗</a>
+          <a class="app-store-badge" href="https://apps.apple.com/pt/app/petsverse-pet-social-health/id6761722742" target="_blank" rel="noopener">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="36" />
+          </a>
+        </div>
 
         <a class="app-card" href="https://triagepaw.com" target="_blank" rel="noopener">
           <div class="app-card-header">
