@@ -9,7 +9,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <link rel="manifest" href="site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -58,11 +57,20 @@
     }
 
     .nav-wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       font-family: 'DM Serif Display', serif;
       font-size: 15px;
       letter-spacing: 0.04em;
       color: var(--ink);
       text-decoration: none;
+    }
+
+    .nav-logo {
+      height: 28px;
+      width: auto;
+      display: block;
     }
 
     .nav-contact {
@@ -319,7 +327,10 @@
 <body>
 
   <nav>
-    <a class="nav-wordmark" href="/">Savagesimplicity</a>
+    <a class="nav-wordmark" href="/">
+      <img class="nav-logo" src="logo sem BK.png" alt="" width="28" height="28" />
+      SavageSimplicity
+    </a>
     <a class="nav-contact" href="mailto:paulo@savagesimplicity.com">paulo@savagesimplicity.com</a>
   </nav>
 
