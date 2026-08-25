@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termos de Serviço — SAVAGESIMPLICITY</title>
+  <meta name="description" content="Termos de Serviço do site institucional SAVAGESIMPLICITY – UNIPESSOAL LDA." />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1a18;
+      --ink-muted: #5c5c56;
+      --ink-faint: #9c9c94;
+      --surface: #f7f6f2;
+      --surface-card: #ffffff;
+      --border: rgba(26,26,24,0.10);
+      --border-strong: rgba(26,26,24,0.18);
+      --accent: #1d9e75;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--surface);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2.5rem;
+      background: rgba(247,246,242,0.90);
+      backdrop-filter: blur(14px);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .nav-wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'DM Serif Display', serif;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-logo { height: 28px; width: auto; display: block; }
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      background: var(--border);
+      border-radius: 6px;
+      padding: 2px;
+    }
+    .lang-btn {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: none;
+      background: transparent;
+      color: var(--ink-faint);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .lang-btn.active { background: var(--surface-card); color: var(--ink); }
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 7rem 2.5rem 4rem;
+    }
+    .page-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0.75rem;
+    }
+    .page-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .page-date {
+      font-size: 13px;
+      color: var(--ink-faint);
+      margin-bottom: 2.5rem;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px;
+      color: var(--ink);
+      margin: 2rem 0 0.5rem;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--ink-muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      border-top: 0.5px solid var(--border-strong);
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .footer-copy { font-size: 12px; color: var(--ink-faint); }
+
+    [data-lang] { display: none; }
+    .lang-pt [data-lang="pt"] { display: block; }
+    .lang-en [data-lang="en"] { display: block; }
+  </style>
+</head>
+<body class="lang-pt">
+
+  <nav>
+    <a class="nav-wordmark" href="/">
+      <img class="nav-logo" src="logo-sem-bk.png" alt="" width="28" height="28" />
+      SavageSimplicity
+    </a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('pt')">PT</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+
+  <main class="content">
+
+    <!-- PT -->
+    <div data-lang="pt">
+      <p class="page-eyebrow">Legal</p>
+      <h1 class="page-title">Termos de Utilização</h1>
+      <p class="page-date">Última atualização: agosto de 2026</p>
+
+      <p>Ao aceder a <strong>savagesimplicity.com</strong>, aceita os presentes Termos de Utilização. Este site é de natureza exclusivamente informativa e institucional — apresenta a empresa e os seus produtos, mas não disponibiliza serviços diretamente neste domínio.</p>
+
+      <h2 class="section-title">1. Sobre este site</h2>
+      <p>savagesimplicity.com é o site institucional da SAVAGESIMPLICITY – UNIPESSOAL LDA, empresa de tecnologia registada em Portugal. O site tem como único objetivo apresentar a empresa, os seus produtos e meios de contacto.</p>
+
+      <h2 class="section-title">2. Produtos e serviços</h2>
+      <p>Os produtos referenciados neste site (Avaliei, StarkVet, PetsVerse, TriagePaw, MapPet, PetPortugal, EncontraTerapeutas) são disponibilizados nos respetivos domínios, onde vigoram os seus próprios termos e condições. A utilização de qualquer um desses produtos está sujeita aos termos específicos de cada plataforma.</p>
+
+      <h2 class="section-title">3. Propriedade intelectual</h2>
+      <p>Todo o conteúdo deste site — textos, logótipos, imagens e design — é propriedade da SAVAGESIMPLICITY – UNIPESSOAL LDA ou dos respetivos titulares de direitos, e está protegido pela legislação aplicável. A reprodução sem autorização prévia e escrita é proibida.</p>
+
+      <h2 class="section-title">4. Limitação de responsabilidade</h2>
+      <p>A informação disponibilizada neste site é fornecida a título informativo e pode ser alterada sem aviso prévio. A SAVAGESIMPLICITY – UNIPESSOAL LDA não assume responsabilidade por eventuais erros, omissões ou desatualizações do conteúdo.</p>
+
+      <h2 class="section-title">5. Links externos</h2>
+      <p>Este site contém ligações para sites e aplicações de terceiros. Não somos responsáveis pelo conteúdo, políticas ou práticas desses sites externos.</p>
+
+      <h2 class="section-title">6. Lei aplicável</h2>
+      <p>Estes termos são regidos pela lei portuguesa. Qualquer litígio será submetido aos tribunais competentes da comarca de Lisboa, Portugal.</p>
+
+      <h2 class="section-title">7. Contacto</h2>
+      <p>Para qualquer questão: <a href="mailto:paulo@savagesimplicity.com">paulo@savagesimplicity.com</a></p>
+    </div>
+
+    <!-- EN -->
+    <div data-lang="en">
+      <p class="page-eyebrow">Legal</p>
+      <h1 class="page-title">Terms of Use</h1>
+      <p class="page-date">Last updated: August 2026</p>
+
+      <p>By accessing <strong>savagesimplicity.com</strong>, you agree to these Terms of Use. This website is purely informational and institutional — it presents the company and its products, but does not provide services directly on this domain.</p>
+
+      <h2 class="section-title">1. About this site</h2>
+      <p>savagesimplicity.com is the institutional website of SAVAGESIMPLICITY – UNIPESSOAL LDA, a technology company registered in Portugal. The sole purpose of this site is to present the company, its products, and contact information.</p>
+
+      <h2 class="section-title">2. Products and services</h2>
+      <p>The products referenced on this site (Avaliei, StarkVet, PetsVerse, TriagePaw, MapPet, PetPortugal, EncontraTerapeutas) are provided on their respective domains, where their own terms and conditions apply. Use of any of these products is subject to each platform's specific terms.</p>
+
+      <h2 class="section-title">3. Intellectual property</h2>
+      <p>All content on this site — text, logos, images, and design — is the property of SAVAGESIMPLICITY – UNIPESSOAL LDA or the respective rights holders, and is protected by applicable law. Reproduction without prior written consent is prohibited.</p>
+
+      <h2 class="section-title">4. Limitation of liability</h2>
+      <p>The information on this site is provided for informational purposes and may be changed without prior notice. SAVAGESIMPLICITY – UNIPESSOAL LDA accepts no responsibility for errors, omissions, or outdated content.</p>
+
+      <h2 class="section-title">5. External links</h2>
+      <p>This site contains links to third-party websites and applications. We are not responsible for the content, policies, or practices of those external sites.</p>
+
+      <h2 class="section-title">6. Governing law</h2>
+      <p>These terms are governed by Portuguese law. Any disputes shall be submitted to the competent courts of Lisbon, Portugal.</p>
+
+      <h2 class="section-title">7. Contact</h2>
+      <p>For any questions: <a href="mailto:paulo@savagesimplicity.com">paulo@savagesimplicity.com</a></p>
+    </div>
+
+  </main>
+
+  <footer>
+    <span class="footer-copy" data-lang="pt">© 2026 SAVAGESIMPLICITY – UNIPESSOAL LDA</span>
+    <span class="footer-copy" data-lang="en">© 2026 SAVAGESIMPLICITY – UNIPESSOAL LDA</span>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.className = 'lang-' + lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+      });
+      document.documentElement.lang = lang;
+    }
+  </script>
+
+</body>
+</html>

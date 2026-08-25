@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade — SAVAGESIMPLICITY</title>
+  <meta name="description" content="Política de Privacidade do site institucional SAVAGESIMPLICITY – UNIPESSOAL LDA." />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1a18;
+      --ink-muted: #5c5c56;
+      --ink-faint: #9c9c94;
+      --surface: #f7f6f2;
+      --surface-card: #ffffff;
+      --border: rgba(26,26,24,0.10);
+      --border-strong: rgba(26,26,24,0.18);
+      --accent: #1d9e75;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--surface);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2.5rem;
+      background: rgba(247,246,242,0.90);
+      backdrop-filter: blur(14px);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .nav-wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'DM Serif Display', serif;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-logo { height: 28px; width: auto; display: block; }
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      background: var(--border);
+      border-radius: 6px;
+      padding: 2px;
+    }
+    .lang-btn {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: none;
+      background: transparent;
+      color: var(--ink-faint);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .lang-btn.active { background: var(--surface-card); color: var(--ink); }
+
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 7rem 2.5rem 4rem;
+    }
+    .page-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0.75rem;
+    }
+    .page-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .page-date {
+      font-size: 13px;
+      color: var(--ink-faint);
+      margin-bottom: 2.5rem;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px;
+      color: var(--ink);
+      margin: 2rem 0 0.5rem;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--ink-muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr {
+      border: none;
+      border-top: 0.5px solid var(--border-strong);
+      margin: 2rem 0;
+    }
+    footer {
+      border-top: 0.5px solid var(--border-strong);
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .footer-copy { font-size: 12px; color: var(--ink-faint); }
+
+    [data-lang] { display: none; }
+    .lang-pt [data-lang="pt"] { display: block; }
+    .lang-en [data-lang="en"] { display: block; }
+  </style>
+</head>
+<body class="lang-pt">
+
+  <nav>
+    <a class="nav-wordmark" href="/">
+      <img class="nav-logo" src="logo-sem-bk.png" alt="" width="28" height="28" />
+      SavageSimplicity
+    </a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('pt')">PT</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+
+  <main class="content">
+
+    <!-- PT -->
+    <div data-lang="pt">
+      <p class="page-eyebrow">Legal</p>
+      <h1 class="page-title">Política de Privacidade</h1>
+      <p class="page-date">Última atualização: agosto de 2026</p>
+
+      <p>Esta Política de Privacidade aplica-se exclusivamente ao site institucional <strong>savagesimplicity.com</strong> e descreve como a SAVAGESIMPLICITY – UNIPESSOAL LDA trata os dados pessoais dos visitantes. Os produtos e serviços disponibilizados por esta empresa (Avaliei, StarkVet, PetsVerse, TriagePaw, MapPet, PetPortugal, EncontraTerapeutas) têm as suas próprias políticas de privacidade disponíveis nos respetivos sites.</p>
+
+      <h2 class="section-title">1. Responsável pelo tratamento</h2>
+      <p>SAVAGESIMPLICITY – UNIPESSOAL LDA, empresa registada em Portugal.<br>
+      Contacto: <a href="mailto:paulo@savagesimplicity.com">paulo@savagesimplicity.com</a></p>
+
+      <h2 class="section-title">2. Dados que recolhemos</h2>
+      <p>Este site institucional <strong>não recolhe dados pessoais automaticamente</strong>. Não utilizamos cookies de rastreio, não temos formulários de registo e não fazemos análise comportamental dos visitantes.</p>
+      <p>O único dado pessoal que podemos receber é o endereço de email, caso nos contacte voluntariamente através do endereço indicado no site. Esse email é usado exclusivamente para responder à sua mensagem.</p>
+
+      <h2 class="section-title">3. Cookies</h2>
+      <p>Este site não utiliza cookies próprios. Utilizamos a fonte Google Fonts, que pode carregar recursos de servidores da Google. Consulte a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidade da Google</a> para mais informações.</p>
+
+      <h2 class="section-title">4. Partilha de dados</h2>
+      <p>Não partilhamos, vendemos nem cedemos quaisquer dados pessoais a terceiros.</p>
+
+      <h2 class="section-title">5. Os seus direitos (RGPD)</h2>
+      <p>Ao abrigo do Regulamento Geral sobre a Proteção de Dados (RGPD), tem direito a aceder, retificar, apagar ou opor-se ao tratamento dos seus dados pessoais. Para exercer estes direitos, contacte-nos em <a href="mailto:paulo@savagesimplicity.com">paulo@savagesimplicity.com</a>. Responderemos no prazo de 30 dias.</p>
+
+      <h2 class="section-title">6. Alterações a esta política</h2>
+      <p>Podemos atualizar esta política ocasionalmente. A data de última atualização será sempre indicada no topo desta página.</p>
+
+      <h2 class="section-title">7. Contacto</h2>
+      <p>Para qualquer questão relacionada com privacidade: <a href="mailto:paulo@savagesimplicity.com">paulo@savagesimplicity.com</a></p>
+    </div>
+
+    <!-- EN -->
+    <div data-lang="en">
+      <p class="page-eyebrow">Legal</p>
+      <h1 class="page-title">Privacy Policy</h1>
+      <p class="page-date">Last updated: August 2026</p>
+
+      <p>This Privacy Policy applies exclusively to the institutional website <strong>savagesimplicity.com</strong> and describes how SAVAGESIMPLICITY – UNIPESSOAL LDA handles the personal data of visitors. The products and services offered by this company (Avaliei, StarkVet, PetsVerse, TriagePaw, MapPet, PetPortugal, EncontraTerapeutas) have their own privacy policies available on their respective websites.</p>
+
+      <h2 class="section-title">1. Data controller</h2>
+      <p>SAVAGESIMPLICITY – UNIPESSOAL LDA, a company registered in Portugal.<br>
+      Contact: <a href="mailto:paulo@savagesimplicity.com">paulo@savagesimplicity.com</a></p>
+
+      <h2 class="section-title">2. Data we collect</h2>
+      <p>This institutional website <strong>does not automatically collect personal data</strong>. We do not use tracking cookies, we have no registration forms, and we do not perform behavioural analysis of visitors.</p>
+      <p>The only personal data we may receive is an email address, if you voluntarily contact us through the address listed on the site. That email is used solely to reply to your message.</p>
+
+      <h2 class="section-title">3. Cookies</h2>
+      <p>This site does not use its own cookies. We use Google Fonts, which may load resources from Google's servers. Please refer to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a> for more information.</p>
+
+      <h2 class="section-title">4. Data sharing</h2>
+      <p>We do not share, sell, or transfer any personal data to third parties.</p>
+
+      <h2 class="section-title">5. Your rights (GDPR)</h2>
+      <p>Under the General Data Protection Regulation (GDPR), you have the right to access, rectify, erase, or object to the processing of your personal data. To exercise these rights, contact us at <a href="mailto:paulo@savagesimplicity.com">paulo@savagesimplicity.com</a>. We will respond within 30 days.</p>
+
+      <h2 class="section-title">6. Changes to this policy</h2>
+      <p>We may update this policy occasionally. The last updated date will always be shown at the top of this page.</p>
+
+      <h2 class="section-title">7. Contact</h2>
+      <p>For any privacy-related questions: <a href="mailto:paulo@savagesimplicity.com">paulo@savagesimplicity.com</a></p>
+    </div>
+
+  </main>
+
+  <footer>
+    <span class="footer-copy" data-lang="pt">© 2026 SAVAGESIMPLICITY – UNIPESSOAL LDA</span>
+    <span class="footer-copy" data-lang="en">© 2026 SAVAGESIMPLICITY – UNIPESSOAL LDA</span>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.className = 'lang-' + lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+      });
+      document.documentElement.lang = lang;
+    }
+  </script>
+
+</body>
+</html>
