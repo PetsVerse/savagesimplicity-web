@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="xgWhJ_mJuHFI_TvoaAOw5soBZhUu_nE6bpQSlEewUeI" />
-  <title>SAVAGESIMPLICITY — Digital tools for pet owners</title>
-  <meta name="description" content="SAVAGESIMPLICITY – UNIPESSOAL LDA is a Portuguese technology company building mobile applications for pet owners and veterinary professionals." />
+  <title>SAVAGESIMPLICITY — Tecnologia portuguesa para negócios e pessoas</title>
+  <meta name="description" content="SAVAGESIMPLICITY – UNIPESSOAL LDA é uma empresa portuguesa de tecnologia que desenvolve aplicações móveis, diretórios e serviços digitais." />
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -22,13 +22,14 @@
       --ink-faint: #9c9c94;
       --surface: #f7f6f2;
       --surface-card: #ffffff;
-      --border: rgba(26,26,24,0.1);
+      --border: rgba(26,26,24,0.10);
       --border-strong: rgba(26,26,24,0.18);
       --teal: #0f6e56;
       --teal-light: #e1f5ee;
-      --coral: #993c1d;
-      --coral-light: #faece7;
       --accent: #1d9e75;
+      --accent-dark: #0f6e56;
+      --gold: #b07d2a;
+      --gold-light: #fdf3e0;
     }
 
     html { scroll-behavior: smooth; }
@@ -51,9 +52,9 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2.5rem;
-      background: rgba(247,246,242,0.88);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(247,246,242,0.90);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border-bottom: 0.5px solid var(--border);
     }
 
@@ -74,9 +75,64 @@
       display: block;
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--ink-muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+    }
+
+    /* Language toggle */
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      background: var(--border);
+      border-radius: 6px;
+      padding: 2px;
+    }
+
+    .lang-btn {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: none;
+      background: transparent;
+      color: var(--ink-faint);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .lang-btn.active {
+      background: var(--surface-card);
+      color: var(--ink);
+    }
+
     /* ── HERO ── */
     .hero {
-      padding: 6.5rem 2.5rem 2.5rem;
+      padding: 7rem 2.5rem 3rem;
       max-width: 900px;
       margin: 0 auto;
     }
@@ -92,7 +148,7 @@
 
     .hero-title {
       font-family: 'DM Serif Display', serif;
-      font-size: clamp(38px, 6vw, 64px);
+      font-size: clamp(36px, 6vw, 62px);
       line-height: 1.1;
       color: var(--ink);
       margin-bottom: 1.25rem;
@@ -111,11 +167,11 @@
       line-height: 1.8;
     }
 
-    /* ── SECTION ── */
+    /* ── SECTIONS ── */
     section {
       max-width: 900px;
       margin: 0 auto;
-      padding: 0 2.5rem 2.5rem;
+      padding: 0 2.5rem 3rem;
     }
 
     .section-rule {
@@ -133,18 +189,18 @@
       margin-bottom: 1.25rem;
     }
 
-    /* ── APPS ── */
-    .apps-grid {
+    /* ── CARDS GRID ── */
+    .cards-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
 
     @media (max-width: 580px) {
-      .apps-grid { grid-template-columns: 1fr; }
+      .cards-grid { grid-template-columns: 1fr; }
     }
 
-    .app-card {
+    .card {
       background: var(--surface-card);
       border: 0.5px solid var(--border-strong);
       border-radius: 16px;
@@ -157,19 +213,19 @@
       color: inherit;
     }
 
-    .app-card:hover {
+    .card:hover {
       border-color: var(--accent);
       transform: translateY(-2px);
     }
 
-    .app-card-header {
+    .card-header {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       gap: 1rem;
     }
 
-    .app-icon {
+    .card-icon {
       width: 48px;
       height: 48px;
       border-radius: 12px;
@@ -178,33 +234,46 @@
       display: block;
     }
 
-    .app-badge {
+    /* Placeholder icon for products without image */
+    .card-icon-placeholder {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      background: var(--teal-light);
+    }
+
+    .card-icon-placeholder.gold {
+      background: var(--gold-light);
+    }
+
+    .badge {
       font-size: 10px;
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       padding: 3px 8px;
       border-radius: 4px;
+      white-space: nowrap;
     }
 
-    .badge-live {
-      background: var(--teal-light);
-      color: var(--teal);
-    }
+    .badge-live { background: var(--teal-light); color: var(--teal); }
+    .badge-soon { background: #f1efe8; color: #5f5e5a; }
+    .badge-new  { background: var(--gold-light); color: var(--gold); }
+    .badge-b2b  { background: #ede8f5; color: #5b3f8a; }
 
-    .badge-soon {
-      background: #f1efe8;
-      color: #5f5e5a;
-    }
-
-    .app-name {
+    .card-name {
       font-family: 'DM Serif Display', serif;
       font-size: 22px;
       line-height: 1.2;
       color: var(--ink);
     }
 
-    .app-desc {
+    .card-desc {
       font-size: 14px;
       font-weight: 300;
       color: var(--ink-muted);
@@ -212,7 +281,7 @@
       flex: 1;
     }
 
-    .app-url {
+    .card-url {
       font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.06em;
@@ -220,24 +289,84 @@
       text-decoration: none;
     }
 
-    .app-url:hover { text-decoration: underline; }
+    .card-url:hover { text-decoration: underline; }
 
-    .app-store-badges {
+    .store-badges {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 0.5rem;
     }
 
-    .app-store-badge {
-      display: inline-block;
-      line-height: 0;
+    .store-badge { display: inline-block; line-height: 0; }
+    .store-badge img { display: block; height: 34px; width: auto; }
+
+    /* ── AVALIEI HIGHLIGHT ── */
+    .avaliei-card {
+      background: var(--surface-card);
+      border: 1.5px solid var(--accent);
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      grid-column: 1 / -1;
+      position: relative;
+      overflow: hidden;
     }
 
-    .app-store-badge img {
-      display: block;
-      height: 36px;
-      width: auto;
+    .avaliei-card::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle at top right, rgba(29,158,117,0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .avaliei-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 580px) {
+      .avaliei-inner { grid-template-columns: 1fr; }
+    }
+
+    .avaliei-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent);
+      color: white;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.15s;
+      align-self: flex-start;
+    }
+
+    .avaliei-cta:hover { background: var(--accent-dark); }
+
+    .avaliei-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+    }
+
+    .feature-pill {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: var(--teal-light);
+      color: var(--teal);
     }
 
     /* ── ORG DETAILS ── */
@@ -256,7 +385,7 @@
       border-bottom: 0.5px solid var(--border);
     }
 
-    .detail-item:nth-child(odd) { padding-right: 2rem; }
+    .detail-item:nth-child(odd)  { padding-right: 2rem; }
     .detail-item:nth-child(even) { padding-left: 2rem; border-left: 0.5px solid var(--border); }
 
     @media (max-width: 580px) {
@@ -272,10 +401,7 @@
       margin-bottom: 4px;
     }
 
-    .detail-value {
-      font-size: 14px;
-      color: var(--ink);
-    }
+    .detail-value { font-size: 14px; color: var(--ink); }
 
     /* ── CONTACT ── */
     .contact-link {
@@ -290,10 +416,7 @@
       transition: color 0.15s, border-color 0.15s;
     }
 
-    .contact-link:hover {
-      color: var(--accent);
-      border-color: var(--accent);
-    }
+    .contact-link:hover { color: var(--accent); border-color: var(--accent); }
 
     /* ── FOOTER ── */
     footer {
@@ -308,12 +431,25 @@
       margin: 0 auto;
     }
 
-    .footer-copy {
-      font-size: 12px;
-      color: var(--ink-faint);
+    .footer-copy { font-size: 12px; color: var(--ink-faint); }
+
+    /* Footer links */
+    .footer-links {
+      display: flex;
+      gap: 1.25rem;
+      list-style: none;
     }
 
-    /* ── FADE-IN ── */
+    .footer-links a {
+      font-size: 12px;
+      color: var(--ink-faint);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -322,63 +458,122 @@
     .hero-eyebrow { animation: fadeUp 0.5s ease both; }
     .hero-title   { animation: fadeUp 0.5s 0.1s ease both; }
     .hero-body    { animation: fadeUp 0.5s 0.2s ease both; }
+
+    /* ── I18N ── */
+    [data-lang] { display: none; }
+    .lang-pt [data-lang="pt"] { display: block; }
+    .lang-en [data-lang="en"] { display: block; }
+    .lang-pt [data-lang="pt"].inline-flex,
+    .lang-en [data-lang="en"].inline-flex { display: inline-flex; }
+    .lang-pt [data-lang="pt"].flex,
+    .lang-en [data-lang="en"].flex { display: flex; }
   </style>
 </head>
-<body>
+<body class="lang-pt">
 
   <nav>
     <a class="nav-wordmark" href="/">
       <img class="nav-logo" src="logo-sem-bk.png" alt="" width="28" height="28" />
       SavageSimplicity
     </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#apps" data-lang="pt">Apps</a><a href="#apps" data-lang="en">Apps</a></li>
+        <li><a href="#diretorios" data-lang="pt">Diretórios</a><a href="#diretorios" data-lang="en">Directories</a></li>
+        <li><a href="#servicos" data-lang="pt">Serviços B2B</a><a href="#servicos" data-lang="en">B2B Services</a></li>
+        <li><a href="#empresa" data-lang="pt">Empresa</a><a href="#empresa" data-lang="en">Company</a></li>
+        <li><a href="#contacto" data-lang="pt">Contacto</a><a href="#contacto" data-lang="en">Contact</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('pt')">PT</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
   </nav>
 
   <main>
+    <!-- HERO -->
     <div class="hero">
-      <p class="hero-eyebrow">Portugal · Mobile software</p>
-      <h1 class="hero-title">Digital tools for<br><em>pet owners</em></h1>
-      <p class="hero-body">
-        SAVAGESIMPLICITY – UNIPESSOAL LDA is a Portuguese technology company developing mobile applications for pet owners and veterinary professionals. Our products combine community, health tracking, and clinical knowledge to improve the lives of pets and the people who care for them.
+      <p class="hero-eyebrow" data-lang="pt">Portugal · Tecnologia digital</p>
+      <p class="hero-eyebrow" data-lang="en">Portugal · Digital technology</p>
+
+      <h1 class="hero-title" data-lang="pt">Ferramentas digitais<br>para <em>pessoas e negócios</em></h1>
+      <h1 class="hero-title" data-lang="en">Digital tools for<br><em>people and businesses</em></h1>
+
+      <p class="hero-body" data-lang="pt">
+        SAVAGESIMPLICITY – UNIPESSOAL LDA é uma empresa portuguesa de tecnologia que desenvolve aplicações móveis, diretórios e serviços digitais para consumidores e empresas. Fundada por um médico veterinário com paixão por tecnologia e inteligência artificial.
+      </p>
+      <p class="hero-body" data-lang="en">
+        SAVAGESIMPLICITY – UNIPESSOAL LDA is a Portuguese technology company building mobile applications, directories, and digital services for consumers and businesses. Founded by a veterinarian with a passion for technology and artificial intelligence.
       </p>
     </div>
 
+    <!-- APPS -->
     <section id="apps">
       <hr class="section-rule" />
-      <p class="section-label">Our products</p>
-      <div class="apps-grid">
+      <p class="section-label" data-lang="pt">Aplicações móveis</p>
+      <p class="section-label" data-lang="en">Mobile applications</p>
+      <div class="cards-grid">
 
-        <div class="app-card">
-          <div class="app-card-header">
-            <img class="app-icon" src="petsverse.png" alt="PetsVerse app icon" width="48" height="48" />
-            <span class="app-badge badge-live">Live on iOS and Android</span>
+        <!-- PetsVerse -->
+        <div class="card">
+          <div class="card-header">
+            <img class="card-icon" src="petsverse.png" alt="PetsVerse" width="48" height="48" />
+            <span class="badge badge-live" data-lang="pt">Live — iOS e Android</span>
+            <span class="badge badge-live" data-lang="en">Live — iOS & Android</span>
           </div>
-          <p class="app-name">PetsVerse</p>
-          <p class="app-desc">PetsVerse is a social and health app built for pet owners. It brings together pet health tracking, care reminders, and a warm community where pet owners can share moments, discover pet-friendly meetups, and connect with others who love animals as much as they do.</p>
-          <a class="app-url" href="https://petsverseapp.com" target="_blank" rel="noopener">petsverseapp.com ↗</a>
-          <div class="app-store-badges">
-            <a class="app-store-badge" href="https://apps.apple.com/pt/app/petsverse-pet-social-health/id6761722742" target="_blank" rel="noopener">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="36" />
+          <p class="card-name">PetsVerse</p>
+          <p class="card-desc" data-lang="pt">Rede social e app de saúde para donos de animais. Registo de saúde, lembretes de cuidados, comunidade e locais pet-friendly — tudo num só lugar.</p>
+          <p class="card-desc" data-lang="en">Social network and health app for pet owners. Health tracking, care reminders, community and pet-friendly places — all in one place.</p>
+          <a class="card-url" href="https://petsverseapp.com" target="_blank" rel="noopener">petsverseapp.com ↗</a>
+          <div class="store-badges">
+            <a class="store-badge" href="https://apps.apple.com/pt/app/petsverse-pet-social-health/id6761722742" target="_blank" rel="noopener">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" height="34" />
             </a>
-            <a class="app-store-badge" href="https://play.google.com/store/apps/details?id=com.akiraprt.petsverse&hl=pt_PT" target="_blank" rel="noopener">
-              <img src="google-play.png" alt="Get it on Google Play" height="36" />
+            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.akiraprt.petsverse&hl=pt_PT" target="_blank" rel="noopener">
+              <img src="google-play.png" alt="Google Play" height="34" />
             </a>
           </div>
         </div>
 
-        <div class="app-card">
-          <div class="app-card-header">
-            <img class="app-icon" src="triagepaw.png" alt="TriagePaw app icon" width="48" height="48" />
-            <span class="app-badge badge-live">Live on iOS and Android</span>
+        <!-- TriagePaw -->
+        <div class="card">
+          <div class="card-header">
+            <img class="card-icon" src="triagepaw.png" alt="TriagePaw" width="48" height="48" />
+            <span class="badge badge-live" data-lang="pt">Live — iOS e Android</span>
+            <span class="badge badge-live" data-lang="en">Live — iOS & Android</span>
           </div>
-          <p class="app-name">TriagePaw</p>
-          <p class="app-desc">An evidence-based pet health triage app helping owners assess symptoms and make informed decisions about veterinary care.</p>
-          <a class="app-url" href="https://triagepaw.com" target="_blank" rel="noopener">triagepaw.com ↗</a>
-          <div class="app-store-badges">
-            <a class="app-store-badge" href="https://apps.apple.com/us/app/triage-paw-ai-pet-triage/id6758516514" target="_blank" rel="noopener">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="36" />
+          <p class="card-name">TriagePaw</p>
+          <p class="card-desc" data-lang="pt">App de triagem de saúde animal com base em evidência clínica. Ajuda donos a avaliar sintomas e a tomar decisões informadas sobre cuidados veterinários.</p>
+          <p class="card-desc" data-lang="en">Evidence-based pet health triage app. Helps owners assess symptoms and make informed decisions about veterinary care.</p>
+          <a class="card-url" href="https://triagepaw.com" target="_blank" rel="noopener">triagepaw.com ↗</a>
+          <div class="store-badges">
+            <a class="store-badge" href="https://apps.apple.com/us/app/triage-paw-ai-pet-triage/id6758516514" target="_blank" rel="noopener">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" height="34" />
             </a>
-            <a class="app-store-badge" href="https://play.google.com/store/apps/details?id=com.akiraprt.triagepaw&hl=pt_PT" target="_blank" rel="noopener">
-              <img src="google-play.png" alt="Get it on Google Play" height="36" />
+            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.akiraprt.triagepaw&hl=pt_PT" target="_blank" rel="noopener">
+              <img src="google-play.png" alt="Google Play" height="34" />
+            </a>
+          </div>
+        </div>
+
+        <!-- MapPet -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon-placeholder">🗺️</div>
+            <span class="badge badge-live" data-lang="pt">Live — iOS e Android</span>
+            <span class="badge badge-live" data-lang="en">Live — iOS & Android</span>
+          </div>
+          <p class="card-name">MapPet</p>
+          <p class="card-desc" data-lang="pt">Mapa colaborativo de locais pet-friendly em Portugal, Espanha, França e Itália. Mais de 90.000 locais — parques, restaurantes, hotéis e muito mais.</p>
+          <p class="card-desc" data-lang="en">Collaborative map of pet-friendly places across Portugal, Spain, France and Italy. Over 90,000 locations — parks, restaurants, hotels and more.</p>
+          <a class="card-url" href="https://mappet.app" target="_blank" rel="noopener">mappet.app ↗</a>
+          <div class="store-badges">
+            <a class="store-badge" href="https://apps.apple.com/app/mappet" target="_blank" rel="noopener">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" height="34" />
+            </a>
+            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.akiraprt.mappet" target="_blank" rel="noopener">
+              <img src="google-play.png" alt="Google Play" height="34" />
             </a>
           </div>
         </div>
@@ -386,32 +581,141 @@
       </div>
     </section>
 
-    <section id="about">
+    <!-- DIRETÓRIOS -->
+    <section id="diretorios">
       <hr class="section-rule" />
-      <p class="section-label">Organization details</p>
+      <p class="section-label" data-lang="pt">Diretórios</p>
+      <p class="section-label" data-lang="en">Directories</p>
+      <div class="cards-grid">
+
+        <!-- PetPortugal -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon-placeholder">🐾</div>
+            <span class="badge badge-live">Live</span>
+          </div>
+          <p class="card-name">PetPortugal</p>
+          <p class="card-desc" data-lang="pt">Diretório completo de serviços pet em Portugal — clínicas, hotéis, grooming, creches e muito mais.</p>
+          <p class="card-desc" data-lang="en">Complete directory of pet services in Portugal — clinics, hotels, grooming, daycares and more.</p>
+          <a class="card-url" href="https://petportugal.pt" target="_blank" rel="noopener">petportugal.pt ↗</a>
+        </div>
+
+        <!-- EncontraTerapeutas -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon-placeholder">🧠</div>
+            <span class="badge badge-live">Live</span>
+          </div>
+          <p class="card-name">EncontraTerapeutas</p>
+          <p class="card-desc" data-lang="pt">Diretório de terapeutas e psicólogos em Portugal. Encontra o profissional certo para si por especialidade, localização e disponibilidade.</p>
+          <p class="card-desc" data-lang="en">Directory of therapists and psychologists in Portugal. Find the right professional by specialty, location and availability.</p>
+          <a class="card-url" href="https://encontraterapeutas.pt" target="_blank" rel="noopener">encontraterapeutas.pt ↗</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVIÇOS B2B -->
+    <section id="servicos">
+      <hr class="section-rule" />
+      <p class="section-label" data-lang="pt">Serviços para empresas</p>
+      <p class="section-label" data-lang="en">B2B services</p>
+      <div class="cards-grid">
+
+        <!-- AVALIEI — destaque -->
+        <div class="avaliei-card">
+          <div class="card-header">
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+              <div class="card-icon-placeholder gold">⭐</div>
+              <div>
+                <p class="card-name">Avaliei</p>
+                <span class="badge badge-new" data-lang="pt">Novo · Em breve</span>
+                <span class="badge badge-new" data-lang="en">New · Coming soon</span>
+              </div>
+            </div>
+          </div>
+          <div class="avaliei-inner">
+            <div style="display:flex;flex-direction:column;gap:0.75rem;">
+              <p class="card-desc" data-lang="pt">Plataforma de gestão de reputação online para PMEs portuguesas. Mais reviews, melhores respostas, mais clientes — tudo automático.</p>
+              <p class="card-desc" data-lang="en">Online reputation management platform for Portuguese SMBs. More reviews, better responses, more customers — all automated.</p>
+              <div class="avaliei-features">
+                <span class="feature-pill" data-lang="pt">QR code personalizado</span>
+                <span class="feature-pill" data-lang="en">Custom QR code</span>
+                <span class="feature-pill" data-lang="pt">Respostas por IA</span>
+                <span class="feature-pill" data-lang="en">AI responses</span>
+                <span class="feature-pill" data-lang="pt">Dashboard de reviews</span>
+                <span class="feature-pill" data-lang="en">Reviews dashboard</span>
+                <span class="feature-pill" data-lang="pt">Relatório mensal</span>
+                <span class="feature-pill" data-lang="en">Monthly report</span>
+                <span class="feature-pill" data-lang="pt">Alertas em tempo real</span>
+                <span class="feature-pill" data-lang="en">Real-time alerts</span>
+              </div>
+            </div>
+            <a class="avaliei-cta" href="https://avaliei.pt" target="_blank" rel="noopener" data-lang="pt">Saber mais ↗</a>
+            <a class="avaliei-cta" href="https://avaliei.pt" target="_blank" rel="noopener" data-lang="en">Learn more ↗</a>
+          </div>
+        </div>
+
+        <!-- StarkVet -->
+        <div class="card">
+          <div class="card-header">
+            <img class="card-icon" src="triagepaw.png" alt="StarkVet" width="48" height="48" />
+            <span class="badge badge-b2b">B2B · Live</span>
+          </div>
+          <p class="card-name">StarkVet</p>
+          <p class="card-desc" data-lang="pt">Plataforma de apoio ao diagnóstico clínico para médicos veterinários. Pesquisa de agentes, protocolos e suporte à decisão clínica com IA.</p>
+          <p class="card-desc" data-lang="en">Clinical decision support platform for veterinarians. Agent lookup, protocols and AI-powered clinical decision support.</p>
+          <a class="card-url" href="https://starkvet.com" target="_blank" rel="noopener">starkvet.com ↗</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EMPRESA -->
+    <section id="empresa">
+      <hr class="section-rule" />
+      <p class="section-label" data-lang="pt">Informação da empresa</p>
+      <p class="section-label" data-lang="en">Company information</p>
       <div class="details-grid">
         <div class="detail-item">
-          <p class="detail-label">Legal name</p>
+          <p class="detail-label" data-lang="pt">Nome legal</p>
+          <p class="detail-label" data-lang="en">Legal name</p>
           <p class="detail-value">SAVAGESIMPLICITY – UNIPESSOAL LDA</p>
         </div>
         <div class="detail-item">
-          <p class="detail-label">Jurisdiction</p>
+          <p class="detail-label" data-lang="pt">Jurisdição</p>
+          <p class="detail-label" data-lang="en">Jurisdiction</p>
           <p class="detail-value">Portugal</p>
         </div>
         <div class="detail-item">
-          <p class="detail-label">Entity type</p>
-          <p class="detail-value">Private limited company (Unipessoal LDA)</p>
+          <p class="detail-label" data-lang="pt">Tipo de entidade</p>
+          <p class="detail-label" data-lang="en">Entity type</p>
+          <p class="detail-value" data-lang="pt">Sociedade por quotas (Unipessoal LDA)</p>
+          <p class="detail-value" data-lang="en">Private limited company (Unipessoal LDA)</p>
         </div>
         <div class="detail-item">
-          <p class="detail-label">Industry</p>
-          <p class="detail-value">Mobile software development</p>
+          <p class="detail-label" data-lang="pt">Indústria</p>
+          <p class="detail-label" data-lang="en">Industry</p>
+          <p class="detail-value" data-lang="pt">Software, apps móveis e serviços digitais</p>
+          <p class="detail-value" data-lang="en">Software, mobile apps & digital services</p>
+        </div>
+        <div class="detail-item">
+          <p class="detail-label">DUNS</p>
+          <p class="detail-value">348581783</p>
+        </div>
+        <div class="detail-item">
+          <p class="detail-label" data-lang="pt">Website</p>
+          <p class="detail-label" data-lang="en">Website</p>
+          <p class="detail-value">savagesimplicity.com</p>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <!-- CONTACTO -->
+    <section id="contacto">
       <hr class="section-rule" />
-      <p class="section-label">Contact</p>
+      <p class="section-label" data-lang="pt">Contacto</p>
+      <p class="section-label" data-lang="en">Contact</p>
       <a class="contact-link" href="mailto:paulo@savagesimplicity.com">
         paulo@savagesimplicity.com
       </a>
@@ -419,9 +723,23 @@
   </main>
 
   <footer>
-    <span class="footer-copy">© 2026 SAVAGESIMPLICITY – UNIPESSOAL LDA. All rights reserved.</span>
-    <span class="footer-copy">savagesimplicity.com</span>
+    <span class="footer-copy" data-lang="pt">© 2026 SAVAGESIMPLICITY – UNIPESSOAL LDA. Todos os direitos reservados.</span>
+    <span class="footer-copy" data-lang="en">© 2026 SAVAGESIMPLICITY – UNIPESSOAL LDA. All rights reserved.</span>
+    <ul class="footer-links">
+      <li><a href="/privacy" data-lang="pt">Privacidade</a><a href="/privacy" data-lang="en">Privacy</a></li>
+      <li><a href="/terms" data-lang="pt">Termos</a><a href="/terms" data-lang="en">Terms</a></li>
+    </ul>
   </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.className = 'lang-' + lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+      });
+      document.documentElement.lang = lang;
+    }
+  </script>
 
 </body>
 </html>
